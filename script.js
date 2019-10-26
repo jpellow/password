@@ -77,13 +77,13 @@ else{
         console.log(password.passWord);
     }
 }
-function copy() {
-    var copyText = finalPassword;
-    copyText.select();
-    copyText.setSelectionRange(0, 99999)
-    document.execCommand("copy");
-    alert("Copied the text: " + copyText.value);
-  }
+// function copy() {
+//     var copyText = finalPassword;
+//     copyText.select();
+//     copyText.setSelectionRange(0, 99999)
+//     document.execCommand("copy");
+//     alert("Copied the text: " + copyText.value);
+//   }
 
   copyBtn.addEventListener("click", function copy() {
     var copyText = finalPassword;
