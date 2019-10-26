@@ -1,0 +1,51 @@
+Layout:
+check boxes for user input
+button to generate password
+button to copy password to clipboard
+progress bar to show how secure a password is.
+
+User input:
+8-128 characters (slider/text box/Dropdown)
+special characters
+Numeric Characters
+Lowercase Characters
+Uppercase Characters
+
+Requirements:
+Atleast one character type is selected
+display password
+Copy password to clipboard via button click
+clean
+adaptive resolution
+ReadMe (describing the program)
+
+Coding:
+Password Object
+	passChar:(num 8-128;
+	passSpec:true/false;
+	passNum:true/false;
+	passLower:true/false;
+	passUpper:true/false;
+upon clicking generate password
+check to see if user checked a box for character type
+	If yes proceed to password generation
+	else throw error
+for loop: loop for length of passChar and generate a random character
+	if passSpec === true{
+	add special character to possible random character		
+}
+	if passNum === true{
+	add numeric character to possible random character		
+}
+	if passLow === true{
+	add Lowercase character to possible random character		
+}
+	if passUpper === true{
+	add uppercase character to possible random character		
+}
+
+as it loops generate an arry/string of the password
+When complete display password 
+when copy is clicked, copy password to clipboard
+
+

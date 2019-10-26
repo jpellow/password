@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+    <div class="container bg-light">
+        <div class="row">
+            <div class="col">
+            <h1 class="display-4 text-center mb-4">Password Generator</h1>
+        </div>
+        </div>
+        <form>
+            <div class="form-group bg-white p-3">
+                <label for="formControlRange">Enter Number of Characters</label>
+                <div class="row">
+                    <div class="col-2">
+                        <input type="text" id="textInput" value="" onchange="updateSlider(this.value)">
+                    </div>
+                    <div class="col-9">
+                        <input type="range" class="form-control-range" id="formControlRange" min="8" max="256"
+                            onchange="updateTextInput(this.value)">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 no-gutters">
+                        <input class="form-check-input ml-1" type="checkbox" value="" id="specialChar">
+                    </div>
+                    <div class="col-2 no-gutters">
+                        <label class="form-check-label text-left" for="specialChar">
+                            Special Character
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 no-gutters">
+                        <input class="form-check-input ml-1" type="checkbox" value="" id="numeric">
+                    </div>
+                    <div class="col-5">
+                        <label class="form-check-label text-left" for="numeric">
+                            Numeric
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1">
+                        <input class="form-check-input ml-1" type="checkbox" value="" id="lowerCase">
+                    </div>
+                    <div class="col-5">
+                        <label class="form-check-label text-left" for="lowerCase">
+                            Lower Case
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1">
+                        <input class="form-check-input ml-1" type="checkbox" value="" id="upperCase">
+                    </div>
+                    <div class="col-5">
+                        <label class="form-check-label text-left" for="upperCase">
+                            Upper Case
+                        </label>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-9">
+                        <button type="button" class="btn btn-danger btn-round btn-lg btn-block" onclick="generatePass()">Generate
+                            Password</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" class="btn btn-secondary btn-round btn-lg btn-block" id="copy">Copy to Clipboard</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input class="form-control mt-4" type="text" placeholder="Password..." readonly id="password">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="./script.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
